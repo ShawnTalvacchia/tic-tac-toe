@@ -1,11 +1,23 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
 }
 
 ol,
 ul {
   padding-left: 30px;
+}
+
+.login-button {
+  margin-left: 2rem;
+  background-color: #007bff;
+}
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.current-user {
+  color: #0056b3;
+  margin: 0;
 }
 
 .board-row:after {
@@ -27,14 +39,20 @@ ul {
   font-size: 40px;
   font-weight: bold;
   line-height: 40px;
-  height: 20vh;
+  height: 10vh;
+  min-height: 8rem;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 20vw;
+  width: 10vw;
+  min-width: 5rem;
 }
 
+.board-row {
+  flex-wrap: nowrap;
+  display: flex;
+}
 .square:focus {
   outline: none;
 }
@@ -43,11 +61,61 @@ ul {
   background: #ddd;
 }
 
+.status {
+  color: #0056b3;
+}
+
+.scores {
+  margin-bottom: 0.8rem;
+  color: #0056b3;
+}
+
+.nav-bar {
+  justify-content: space-around !important;
+}
+
+.history-buttons {
+  margin-bottom: 1rem;
+}
+
+.game-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+}
+
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .game-info {
   margin-left: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+.page-container {
+  margin: 0;
+}
+
+.yellow {
+  background-color: #ffc107!important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blue {
+  background-color: #007bff!important;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
